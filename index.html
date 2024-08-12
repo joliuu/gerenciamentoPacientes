@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administrador de Pacientes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  </head>
+  <body>
+    <div class="container"> 
+
+      <div class="tab-content" id="dados">
+        <h2>Dados do Paciente</h2>
+        <form id="clientForm">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required placeholder="Nome">
+          </div>
+          <div class="form-group">
+            <label for="age">Idade:</label>
+            <input type="number" id="age" required placeholder="Idade">
+          </div>
+          <div class="form-group">
+            <label for="city">Cidade:</label>
+            <input type="text" id="city" required placeholder="Cidade">
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required placeholder="E-mail">
+          </div>
+          <div class="form-group">
+            <label for="phone">Número de telefone:</label>
+            <input type="text" id="phone" minlength="11" maxlength="11" required placeholder="Número de telefone">
+          </div>
+          <div class="form-group">
+            <label for="post">Descrição:</label>
+            <input type="text" id="post" required placeholder="Adicionar descrição...">
+          </div>
+          <div class="form-group">
+            <label for="sDate">Data da Consulta:</label>
+            <input type="date" id="sDate" required>
+          </div>
+          <button type="button" id="addClient" onclick="addCliente()">Adicionar Paciente</button>
+        </form>
+      </div>
+
+      <div class="tab-content" id="clientes">
+        <h2>Pacientes</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Cidade</th>
+              <th>Email</th>
+              <th>Telefone</th>
+              <th>Descrição</th>
+              <th>Data da Consulta</th>
+            </tr>
+          </thead>
+          <tbody id="clientTableBody">
+            <!-- Dados dos clientes vão ficar aqui -->
+  </body>
+  <script src="script.js"></script>
+  <script src="firebase-config.js"></script>
+</html>
